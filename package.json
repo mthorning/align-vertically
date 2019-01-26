@@ -1,0 +1,44 @@
+{
+    "name": "align-vertically",
+    "displayName": "Align-Vertically",
+    "description": "Vertically aligns text by the chosen word.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.alignVertically"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.alignVertically",
+                "title": "Align Vertically"
+            }
+        ],
+        "menus": {
+            "editor/context": [
+                {
+                    "command": "extension.alignVertically",
+                    "group": "YourGroup@1"
+                }
+            ]
+        }
+    },
+    "scripts": {
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.10.25",
+        "eslint": "^4.11.0",
+        "jest": "^24.0.0",
+        "typescript": "^3.1.4",
+        "vscode": "^1.1.25"
+    }
+}
