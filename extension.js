@@ -1,5 +1,5 @@
 const vscode = require("vscode");
-const editor = vscode.window.activeTextEditor;
+
 const {
     getMask,
     getLines,
@@ -15,6 +15,7 @@ function getKeywordFromUser() {
 }
 
 async function alignVertically() {
+    const editor = vscode.window.activeTextEditor;
     const text = editor.document.getText(editor.selection);
     if (text) {
         const keyword = await getKeywordFromUser();

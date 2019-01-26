@@ -36,6 +36,8 @@
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
+        "preversion": "npm test",
+        "postversion": "git push && git push --tags",
         "test": "jest"
     },
     "devDependencies": {
