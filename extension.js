@@ -6,7 +6,7 @@ const {
     transform,
     getSpaces,
     joinWithKeyword
-} = require("../functions.js");
+} = require("./functions.js");
 
 function getKeywordFromUser() {
     return vscode.window.showInputBox({
@@ -20,9 +20,9 @@ async function alignVertically() {
         const keyword = await getKeywordFromUser();
         const lines = getLines(text, keyword);
         const mask = getMask(lines);
-        const transformedText = transform(lines, mask);
+        const transformedText = transform(lines, mask, getSpaces);
         const result = joinWithKeyword(transformedText, keyword);
-        console.log(result);
+        editor.edit(builder => builder.replace(editor.selection, result));
     }
 }
 
