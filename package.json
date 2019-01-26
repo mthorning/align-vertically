@@ -3,11 +3,16 @@
     "displayName": "Align-Vertically",
     "description": "Vertically aligns text by the chosen word.",
     "version": "0.1.0",
+    "publisher": "matthewthorning",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mthorning/align-vertically.git"
+    },
     "engines": {
         "vscode": "^1.30.0"
     },
     "categories": [
-        "Other"
+        "Formatters"
     ],
     "activationEvents": [
         "onCommand:extension.alignVertically"
