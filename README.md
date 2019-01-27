@@ -2,20 +2,8 @@
 
 Aligns each line of the selected text by a chosen keyword.
 
-## Before
-
-```javascript
-import React from "react";
-import PropTypes from "prop-types";
-import { Select, Form } from "antd";
-```
-
-## After
-
-```javascript
-import React from "react";
-import PropTypes from "prop-types";
-import { Select, Form } from "antd";
-```
+![Usage Gif](./README.gif)
 
 Highlight some text, right click and select 'Align Vertically' from the menu. Type the keyword/symbol to align to into the input box.
+
+Issues can be raised [here](https://github.com/mthorning/align-vertically/issues)
