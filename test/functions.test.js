@@ -6,15 +6,16 @@ const {
     joinWithKeyword
 } = require("../functions.js");
 
-describe("getLines", () => {
+describe("The function ", () => {
+    const keyword = "SPLIT";
+
     const text = [
-        "This is some A text",
-        "I want A to test",
+        "This is some SPLIT text",
+        "I want SPLIT to test",
         "Nothing to report here",
-        "It A should be getting",
-        "split where there A is"
+        "It SPLIT should be getting",
+        "split where there SPLIT is"
     ].join("\n");
-    const keyword = "A";
 
     const expectedLines = [
         ["This is some ", " text"],
@@ -35,11 +36,11 @@ describe("getLines", () => {
     ];
 
     const expectedResult = [
-        "This is some      A text",
-        "I want            A to test",
+        "This is some      SPLIT text",
+        "I want            SPLIT to test",
         "Nothing to report here",
-        "It                A should be getting",
-        "split where there A is"
+        "It                SPLIT should be getting",
+        "split where there SPLIT is"
     ].join("\n");
 
     test("getLines returns expected", () => {
